@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="video.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="navbhai">
+        <i id="close" class="ri-close-line"></i>
+        <a href="#">About</a>
+        <a href="">Contact</a>
+        <a href="">Pricing</a>
+        <a href="">Home</a>
+    </div>
+    <div id="back">
+        <video src="videostock.mp4" autoplay loop muted></video>
+        <div id="overlay">
+            <nav>
+                <div id="head">
+                    <h2>L&T</h2>
+                </div>
+                <div id="links">
+                    <a href="#">Home</a>
+                    <a href="#">Contact</a>
+                    <a href="#">About</a>
+                    <a href="#">Pricing</a>
+                </div>
+                <i id="menubtn"  class="ri-menu-4-line"></i>
+            </nav>
+
+            <div id="main">
+                   <h3>We make technology that <br>
+                    PERSISTS</h3>
+                   <div id="lorem">
+                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet tempora maiores quaerat earum ipsam explicabo dolorem commodi neque pariatur veritatis!
+                   </div> 
+                   <button>
+                       Know More
+                   </button>
+            </div>
+            <div id="circular">
+                <span>Scroll</span>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var menubtn = document.querySelector("#menubtn");
+        var navbhai = document.querySelector("#navbhai");
+        var close = document.querySelector("#close");
+
+        menubtn.addEventListener('click', function(){
+             navbhai.style.top = '0';
+        })
+
+        close.addEventListener('click', function(){
+            navbhai.style.top = '-100%';
+        })
+    </script>
+
+</body>
+</html>

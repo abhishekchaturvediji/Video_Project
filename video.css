@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+html,body{
+    height: 100%;
+    height: 100%;
+    font-family: "Playfair Display";
+}
+
+
+#back video{
+    width: 100%;
+}
+
+#overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:rgba(0, 0, 0, 0.4) ;
+}
+
+nav{
+    color: #fff;
+    padding: 30px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+nav #links a{
+    text-decoration: none;
+    color: #fff;
+    margin-left: 20px;
+}
+
+nav>i{
+    display: none;
+}
+
+#main{
+    padding: 0 30px;
+    color: #fff;
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+    
+}
+
+
+#main>h3{
+    line-height: 50px;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+
+#lorem{
+    font-size: 17px;
+    width: 420px;
+    margin-bottom: 20px;
+}
+
+#main>button{
+    background-color: transparent;
+    padding: 20px 40px;
+    font-size: 15px;
+    color: #fff;
+    outline: none;
+}
+
+#circular{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    right: 2%;
+    bottom: 5%;
+    border: 1px solid white;
+}
+
+#circular>span{
+    font-size: 25px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-15deg);
+    animation: anim1 1s cubic-bezier(0.19, 1, 0.22, 1) .5s both;
+
+}
+
+
+@keyframes anim1{
+    from{
+        transform: translate(-50%,-50%) rotate(-85deg);
+    }
+
+    to{
+        transform: translate(-50%,-50%) rotate(15deg);
+    }
+}
+
+#circular:active span{
+    background-color: #fff;
+    color: black;
+}
+
+#circular:active{
+    background-color:#fff;
+}
+
+#navbhai{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    z-index:9999;
+    height: 100%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .9s;
+}
+
+#navbhai>a{
+    margin-top: 20px;
+    text-decoration: none;
+    color: black
+
+}
+
+#navbhai>i{
+    position: absolute;
+    top: 4%;
+    right: 7%;
+    font-size: 20px;
+    color: black;
+}
+
+
+
+
+@media(max-width:450px){
+    #back video{
+        width:initial;
+        height: 100vh;
+    }
+
+    nav #links{
+        display: none;
+    }
+
+    #main{
+        padding: 0 20px;
+    }
+
+    #main>h3{
+        font-size: 30px;
+    }
+
+    #main>#lorem{
+        font-size: 12px;
+        width: 80%;
+    }
+
+    #main>button{
+        padding: 10px 20px;
+    }
+
+    #circular{
+        width: 120px ;
+        height: 120px ;
+        bottom:2%;
+    }
+
+    nav>i{
+        display: block;
+    }
+}
